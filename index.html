@@ -7,7 +7,7 @@
     <style>
         body {
             display: flex; 
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center; 
         }
         .container {
@@ -16,39 +16,20 @@
             margin-top: 20px; 
         }
         img {
-            max-width: 100%; /* Chiều rộng tối đa là 100% */
-            height: auto; 
-            object-fit: contain; /* Giữ tỷ lệ của ảnh */
-            cursor: pointer; /* Hiển thị con trỏ để người dùng biết có thể nhấp */
+            max-width: 500px; 
+            height: auto;
         }
         .gif {
-            max-width: 100px; 
-            margin-right: 20px; 
+            max-width: 500px; 
+            margin-right: -70px; 
         }
     </style>
-    <script>
-        function zoomImage(imgSrc) {
-            const zoomedImage = document.createElement("img");
-            zoomedImage.src = imgSrc;
-            zoomedImage.style.position = "fixed";
-            zoomedImage.style.top = "50%";
-            zoomedImage.style.left = "50%";
-            zoomedImage.style.transform = "translate(-50%, -50%)";
-            zoomedImage.style.maxWidth = "90%"; // Giới hạn chiều rộng khi zoom
-            zoomedImage.style.maxHeight = "90%"; // Giới hạn chiều cao khi zoom
-            zoomedImage.style.zIndex = "1000"; // Đảm bảo ảnh nằm trên các phần tử khác
-            zoomedImage.style.cursor = "pointer"; // Hiển thị con trỏ
-            zoomedImage.onclick = () => document.body.removeChild(zoomedImage); // Tắt zoom khi nhấp
-
-            document.body.appendChild(zoomedImage);
-        }
-    </script>
 </head>
 <body>
     <h1>HAPPY WOMEN DAY 20-10</h1>
     <div class="container">
         <img class="gif" src="https://drive.google.com/thumbnail?id=1WJ84F18g-bA5Bh9ybYyJp2rS8ieU4DtL&sz=w1000" alt="Bắn tim">
-        <img src="https://drive.google.com/thumbnail?id=1HKn-eiOcNeweVupoO0fv3-b9Za9nV941&sz=w1000" alt="Hình ảnh chính" onclick="zoomImage('https://drive.google.com/thumbnail?id=1HKn-eiOcNeweVupoO0fv3-b9Za9nV941&sz=w1000')">
+        <img src="https://drive.google.com/thumbnail?id=1HKn-eiOcNeweVupoO0fv3-b9Za9nV941&sz=w1000" alt="Hình ảnh chính">
     </div>
 </body>
 </html>
